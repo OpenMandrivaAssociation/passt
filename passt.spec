@@ -1,7 +1,7 @@
 %undefine _debugsource_packages
 
 Name:		passt
-Version:	2024_10_30.ee7d0b6
+Version:	2024_11_27.c0fbc7e
 Release:	1
 Summary:	User-mode networking daemons for virtual machines and namespaces
 License:	GPL-2.0-or-later AND BSD-3-Clause
