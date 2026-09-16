@@ -1,14 +1,14 @@
 %undefine _debugsource_packages
 
 Name:		passt
-Version:	2024_11_27.c0fbc7e
+Version:	2026_07_28.f8df3f1
 Release:	1
 Summary:	User-mode networking daemons for virtual machines and namespaces
 License:	GPL-2.0-or-later AND BSD-3-Clause
 Group:		System Environment/Daemons
 URL:		https://passt.top/
 Source:		https://passt.top/passt/snapshot/passt-%{version}.tar.zst
-BuildRequires:	make checkpolicy
+BuildRequires:	make
 
 %description
 passt implements a translation layer between a Layer-2 network interface and
@@ -42,10 +42,12 @@ install -p -m 755 %{buildroot}%{_bindir}/passt.avx2 %{buildroot}%{_bindir}/pasta
 %doc %{_docdir}/%{name}/demo.sh
 %{_bindir}/passt
 %{_bindir}/pasta
-%{_bindir}/qrap
+%{_bindir}/passt-repair
+%{_bindir}/pesto
 %{_mandir}/man1/passt.1*
 %{_mandir}/man1/pasta.1*
-%{_mandir}/man1/qrap.1*
+%{_mandir}/man1/passt-repair.1*
+%{_mandir}/man1/pesto.1*
 %ifarch %{x86_64}
 %{_bindir}/passt.avx2
 %{_mandir}/man1/passt.avx2.1*
